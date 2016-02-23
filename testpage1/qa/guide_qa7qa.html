@@ -45,7 +45,15 @@
 <body id="lp">
 <!-- Loading script asynchronously -->
 <script type="text/javascript">
-    (function(a,b,c,d){
+var jsvar1 = "js-one";
+var jsvar2 = "js-two";
+var jarray1 = ["value1", "value2", "value3"];
+var jarray2 = [,,,];
+var utag_data = {
+       udovar1 : "udo-one"
+}   
+
+ (function(a,b,c,d){
     a="//tags.tiqcdn.com/qa7/tealium/main/qa/utag.js"
     b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;
     a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
