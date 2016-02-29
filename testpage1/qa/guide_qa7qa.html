@@ -56,6 +56,24 @@ var utag_data = {
    
 </script>
 
+<!doctype html>
+<html lang="us">
+<head>
+    <meta charset="utf-8">
+    <title>Basic Utag Loader Page</title>
+    <style>
+        body {  font-family: Geneva, Tahoma, Verdana, sans-serif;}
+    </style>    
+</head>
+<body>
+<script type="text/javascript">
+    // document.cookie="utagdb=true";  // Set utag debugging on.
+    var utag_data = {
+    }
+    </script>
+
+    <!-- Loading script asynchronously -->
+
 <script type="text/javascript">
  (function(a,b,c,d){
     a="//tags.tiqcdn.com/qa7/fsubrototest47/main/qa/utag.js"
@@ -63,6 +81,30 @@ var utag_data = {
     a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
     })();
 </script>
+
+<h2>UTAG Loader Page : </h2>
+    <p>This page will load a utag profile. It has 4 nodes where you can load social media tags. These are as follows:
+        <ul>
+            <li>Pinterest : Uses id 'pint'</li>
+            <li>Facebook : Uses id 'face'</li>
+            <li>Google Plus +1: Uses id 'plus'</li>
+            <li>Twitter : Uses id 'twit'</li>
+        </ul>
+    </p>
+    <div id="priv">&nbsp;</div>
+    <h3>Social Media Buttons</h3>
+    <div id="pint">&nbsp;</div>
+    <div id="face">&nbsp;</div>
+    <div id="plus">&nbsp;</div>
+    <div id="twit">&nbsp;</div>
+    
+</body>
+</html>
+
+
+
+
+
 	<div id="wrapper"> 
 		<div id="main"> 
 			<div class="header">
@@ -132,11 +174,6 @@ var utag_data = {
 					<p class="tinyText alignCenter clearAll bottom15">
 						We respect your privacy and will never sell, rent, or share your personal information.</p>
 				</div>
-
-				<div id="face"></div>
-               		        <div id="twit"></div>
-               		        <div id="pint"></div>
-               		        <div id="plus"></div>
 				
 				<input name="req_id" type="hidden" id="req_id" value="first_name;last_name;webtolead_email1">
 			    <input name="redirect_url" type="hidden" id="redirect_url" value="http://www.tealium.com/guide/bg-thankyou.html">
