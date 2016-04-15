@@ -61,13 +61,12 @@ ng="en">
 <script type="text/javascript">
 /*set join data values extension*/
    var city = "san diego";
-   var state = "california"
-   var city_state = "sandiego_california";
+   var state = "california";
+   var city_state = city + ', ' +  state;
 /*set set data values extension*/
    var page_group = "page_group";
 
-document.cookie = 
-   'utag_main_location=city_state'
+document.cookie = utag_main_location = city_state
 
 var utag_data = {
 	jsvar1 : "js-one",
