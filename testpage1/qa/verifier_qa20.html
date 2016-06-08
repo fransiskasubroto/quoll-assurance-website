@@ -1,0 +1,48 @@
+<html>
+<head>
+  <title>Sample HTML Page</title>
+</head>
+<body>
+
+<script type="text/javascript">
+var utag_data = {
+  DS1 : "", // 
+  DS2 : "", // 
+  page_name : "", // Contains a user-friendly name for the page.
+  page_section : "", // Contains a user-friendly page section, e.g. 'configuration section'.
+  page_category : "", // Contains a user-friendly page category, e.g. 'appliance page'.
+  page_subcategory : "", // Contains a user-friendly page subcategory, e.g. 'refrigerator page'.
+  page_type : "", // Contains a user-friendly page type, e.g. 'cart page'.
+  event_name : "" // 
+}
+</script>
+
+<!-- Loading script asynchronously -->
+<script type="text/javascript">
+    (function(a,b,c,d){
+    a='//tags.tiqcdn.com/qa20/fsubrototest/main/prod/utag.js';
+    b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;
+    a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
+    })();
+</script>
+
+<h1>Implementing The Tealium Universal Tag</h1>
+
+<p>The script is generated dynamically based on your configuration selections 
+and includes your Data Layer. The Data Layer is generated from the data sources 
+listed in the Data Sources tab.</p>
+
+<h2>To place the code on your website:</h2>
+
+<ol>
+    <li> Ensure you are are getting the code for the correct environment by 
+looking at the navigation on the left. (Dev, QA, Prod)</li>
+    <li> Click on the "Tealium Script" tab above.</li>
+    <li> Click and drag to select all the code.</li>
+    <li> Copy the code.</li>
+    <li> Navigate to the appropriate webpage, and paste 
+the code after the opening BODY tag.</li>
+</ol>
+
+</body>
+</html>    
