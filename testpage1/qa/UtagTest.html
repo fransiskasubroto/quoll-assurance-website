@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>UTAG Test Profile</title>
+	<link href="http://boxcat.net/pubtest/css/jquery-ui.min.css" rel="stylesheet">
+	<style>
+	body{
+		font-family: "Trebuchet MS", sans-serif;
+		margin: 50px;
+	}
+	select {
+		width: 200px;
+	}
+	#accDiv {
+		min-height: 400px;
+	}
+	</style>
+	<script src="http://boxcat.net/pubtest/js/jquery.js"></script>
+	<script src="http://boxcat.net/pubtest/js/jquery-ui.min.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		document.cookie="utagdb=true";  // Set utag debugging on.
+		var utag_data = {
+		}
+    </script>
+
+    <!-- Loading script asynchronously -->
+    <script type="text/javascript">
+		(function(a,b,c,d){
+			a='//tags.tiqcdn.com/qa15/fsubrototest/main/qa/utag.js';
+			b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;
+			a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
+		})();
+	</script>
+
+	<h1>UTAG Testing Page</h1>
+
+	<div style="min-height:400px"> <!-- This is need to force the accordion to a decent size -->
+		<div id="accordion">
+			<h3>Tags</h3>
+			<div class="accDiv">
+				<div id="face"></div>
+				<div id="twit"></div>
+				<div id="pint"></div>
+				<div id="plus"></div>	
+			</div>
+			<h3>Content Mods</h3>
+			<div class="accDiv">
+				<div id="priv"></div>
+				<span id="cmod"></span>	
+			</div>
+			<h3>Other</h3>
+			<div class="accDiv">Nam dui erat, auctor a, dignissim quis.</div>
+		</div>
+	</div>
+	
+	<script>
+		$( "#accordion" ).accordion({
+			heightStyle: "fill" // This makes the accordion expand to it's parent container size
+		});
+	</script>
+
+</body>
+</html>
