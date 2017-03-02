@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Home Page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script>
+        $(function() {});
+    </script>
+    <style>
+        body {
+            font: 75% Verdana, Arial, sans-serif;
+            margin: 50px;
+        }
+        .tagdiv {
+            width: 400px;
+            height: 200px;
+            padding: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <script type="text/javascript">
+        document.cookie = "utagdb=true"; // Set utag debugging on.
+    </script>
+
+    <!-- Loading script asynchronously -->
+    <script type="text/javascript">
+        (function(a, b, c, d) {
+            a = "//tags.tiqcdn.com/qa10/fstest3/main/qa/utag.js"
+            b = document;
+            c = 'script';
+            d = b.createElement(c);
+            d.src = a;
+            d.type = 'text/java' + c;
+            d.async = true;
+            a = b.getElementsByTagName(c)[0];
+            a.parentNode.insertBefore(d, a);
+        })();
+    </script>
+    <h1>Fransiska's test page</h1>
+
+    <div>
+        <div class="tagdiv" id="face"></div>
+    </div>
+    <div>
+        <div class="tagdiv" id="pint"></div>
+    </div>
+    <div>
+        <div class="tagdiv" id="twit"></div>
+    </div>
+    <div>
+        <div class="tagdiv" id="plus"></div>
+    </div>
+
+</body>
+
+</html>
