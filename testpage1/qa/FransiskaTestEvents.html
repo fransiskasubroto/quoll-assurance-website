@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>Home Page</title>
+	<style type="text/css">
+		body{margin:50px}h1,h2,h3,h4,h5{font-family:Verdana,Arial,sans-serif}.header{font-size:2.5em;font-family:Century Gothic,sans-serif;text-align:left;border-bottom:5px solid #3b4344;margin-bottom:40px}.orangeHBox{clear:both;padding:10px;margin-bottom:15px;margin-top:10px;color:#fff;text-transform:uppercase;font-size:1.7em;font-family:Verdana,Arial,sans-serif;background-color:#ff3939}.blueHBox{clear:both;padding:10px;margin-bottom:15px;margin-top:10px;color:#fff;text-transform:uppercase;font-size:1.7em;font-family:Verdana,Arial,sans-serif;background-color:#007dae}.purpleHBox{clear:both;padding:10px;margin-bottom:15px;margin-top:10px;color:#fff;text-transform:uppercase;font-size:1.7em;font-family:Verdana,Arial,sans-serif;background-color:#a0317f}.textBox{padding:10px;margin:15px;background-color:#f5f5f5;font-family:'PT Serif',serif;font-size:1em}
+		td{padding:5px;border-top: 1px solid black;border-left: 1px solid black;}
+	</style>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script>
+		var ftpg = {
+			setCky : function(){
+				var enVal = $('#en_newval').val();
+				var ptVal = $('#pt_newval').val();
+				console.log("The values are - en_newval =" + enVal + "; pt_newval="+ptVal);
+				try {
+					document.cookie = "event_cookie=" + enVal + ";path=/;domain=" + utag.cfg.domain + ";expires=";
+					document.cookie = "page_cookie=" + ptVal + ";path=/;domain=" + utag.cfg.domain + ";expires=";			        
+			    } catch (e) {
+			        console.log('Exception thrown : '+e);
+			    }
+				
+			}
+		};
+		
+		$(function() {
+			
+		});
+	</script>
+	<script type="text/javascript">
+	</script>
+</head>
+<body>
+	<script type="text/javascript">
+	var utag_data = {
+	  event_name : "", // Tealium variable to identify unique events eg. social_share, user_login, etc.
+	  tealium_event : "", // Identifies the unique names of tracked events.
+	  page_type : "" // Tealium variable to identify page types/templates eg. home, category, search, product, etc.
+	}
+	</script>
+
+	<!-- Loading script asynchronously -->
+	<script type="text/javascript">
+	    (function(a,b,c,d){
+	    a='//tags.tiqcdn.com/qa10/fstest3/colintest/prod/utag.js';
+	    b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;
+	    a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
+	    })();
+	</script>
+
+	    	
+	<div class="header">Tealium Event Test</div>
+	<div class="orangeHBox">Data setup</div>
+	<div class="textBox">
+		<table>
+			<tr>
+				<td>Variable</td>
+				<td>Current Value</td>
+				<td style="border-right: 1px solid black;">New Value</td>
+			</tr>
+			<tr>
+				<td>event_name</td>
+				<td><input type="text" size="30" id="en_currval" readonly="true"></td>
+				<td style="border-right: 1px solid black;"><input type="text" size="30" id="en_newval"></td>
+			</tr>
+			<tr>
+				<td>page_type</td>
+				<td><input type="text" size="30" id="pt_currval" readonly="true"></td>
+				<td style="border-right: 1px solid black;"><input type="text" size="30" id="pt_newval"></td>
+			</tr>
+			<tr>
+				<td colspan="3" style="border-bottom: 1px solid black;border-right: 1px solid black;"><input type="button" value="Set Cookie Values" onclick="ftpg.setCky()"></td>
+			</tr>
+		</table>
+	</div>
+	<div class="blueHBox">TEALIUM_EVENT VALUE</div>
+	<div class="textBox">
+		<h2>The value of tealium_event is : <span id="show_te_val" style="color:#FF33FF "></span></h2>
+		
+	</div>
+</body>
+</html>
